@@ -1,0 +1,41 @@
+<%include partials/header_2%>
+
+<% var studentName = "";%>
+<% ProjectGroup.forEach(function(group){ %>
+    <% studentName = group.studentName; %>
+<% }) %>
+
+
+<div class="container">
+        <div class="row">
+                <h1 style="text-align: center;color: white; text-shadow: 3px 3px 5px black;">How does the project look like ?...</h1>
+                
+                <div style="width:30%; margin:20px auto;">
+                    <button class="btn btn-default btn-large" >
+                            <a href="/index_guide/<%=studentName%>">Go Back </a>
+                    </button>
+
+                    <br/><br/>
+                    <div class ="form-group">
+                            <% ProjectGroup.forEach(function(group){ %>        
+                                <div class="" >
+                                    <div class="thumbnail">
+                                        <img src="<%= group.image %>">  
+                                    </div>
+                                </div> 
+        
+                            <% }) %>
+                    </div>
+                    
+
+                </div>        
+        </div>
+    </div>
+       
+
+
+
+
+
+
+<%include partials/footer%>

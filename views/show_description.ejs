@@ -1,0 +1,39 @@
+<%include partials/header_2%>
+
+
+<div class="container">
+            <div style="width:70%; margin:20px auto;">
+                <% Projectgroups.forEach(function(group) {%>
+                    <div style="color: aliceblue;">
+                        <h4>Student Name : <%= group.studentName%></h4>
+                    <h4>Domain Name : <%= group.domainName%></h4>
+                    </div>
+                    <div style="color: aliceblue;">
+                        <h4>Description : <%= group.description %></h4>
+                    </div>
+                <form action="/description/<%= group.studentName %>" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name = "description" style="height: 100px ;" placeholder="Short description about project">
+                    </div>
+                    <div class = "form-group" >
+                        <button class="btn btn-lg btn-primary btn-block">Save</button>
+                    </div>
+                </form>
+                <div class = "form-group" >
+                        <button class="btn btn-lg btn-primary btn-block">
+                            <a href="/index_student/<%= group.studentName%>" style="color: aliceblue;" >Upload File</a>   
+                        </button>
+                </div>
+                <div class="form-group" >
+                    <button class="btn btn-lg btn-primary btn-block">
+                        <a href="/feedback_per_project/<%= group.studentName%>" style="color: aliceblue ;">Feedback From The Guide</a>
+                    </button>
+                </div>
+                <% })%>
+                
+            </div>
+</div>
+
+
+
+<%include partials/footer%>

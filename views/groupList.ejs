@@ -1,0 +1,22 @@
+<%include partials/header_2%>
+
+<div class="row text-center" style="display:flex; flex-wrap: wrap;" >
+    <% ProjectGroup.forEach(function(group){ %>
+        <% if(group.applicant != "PROJECT GUIDE") {%>
+        <div class="col-md-3 col-sm-6" >
+            <div class="thumbnail">
+                <p><%= group.studentName %> - <%= group.domainName %> </p>
+                <p>
+                    <a href="/guide/<%= group.studentName %>" class = "btn btn-primary">More Info</a>
+                </p>   
+            </div>
+        </div>
+        <%}%>
+    <% }) %>
+    
+</div>
+<button class="btn btn-default btn-large" >
+    <a href="/login">Go Back </a>
+</button>
+
+<%include partials/footer%>

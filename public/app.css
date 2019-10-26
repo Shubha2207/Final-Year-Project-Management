@@ -1,0 +1,15 @@
+body {
+    background-image: url("/images/project_management.jpg");
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+   }
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.thumbnail{
+    box-shadow: 2px 2px 5px black;
+}

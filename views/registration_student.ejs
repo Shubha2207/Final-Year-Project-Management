@@ -1,0 +1,55 @@
+<%include partials/header%>
+
+<div class="container">
+    <div class="row">
+            <h1 style="text-align: center;color: white; text-shadow: 3px 3px 5px black;">Registration For New Student</h1>
+
+            <div style="width:30%; margin:20px auto;">
+                <form action="/groupList_student" method="POST">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name = "studentName" placeholder="USERNAME">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="PASSWORD">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" type="text" name="domainName">
+                            <option value="" disabled="disabled" selected="selected">PROJECT DOMAIN</option>
+                            <option value="Mobile Computing Projects">Mobile Computing Projects</option>
+                            <option value="Web Services Projects">Web Services Projects</option>
+                            <option value="Communication Projects">Communication Projects</option>
+                            <option value="BigData Projects">BigData Projects</option>
+                            <option value="Bioinformatics Projects">Bioinformatics Projects</option>
+                            <option value="Bio Medical Projects">Bio Medical Projects</option>
+                            <option value="Wireless Network Projects">Wireless Network Projects</option>
+                            <option value="IOT Projects">IOT Projects</option>
+                            <option value="Signal Processing Projects">Signal Processing Projects</option>
+                            <option value="Web Application Projects">Web Application Projects</option>
+                            <option value="Embedded Projects">Embedded Projects</option>
+                            <option value="Cloud Projects">Cloud Projects</option>
+                            <option value="Android Projects">Android Projects</option>
+                            <option value="Power System Projects">Power System Projects</option>
+                            <option value="Power Electronics Projects">Power Electronics Projects</option>
+                            <option value="VLSI Projects">VLSI Projects</option>
+                            <option value="Security Projects">Security Projects</option>
+                            <option value="Networking Projects">Networking Projects</option>
+                            <option value="Datamining Projects">Datamining Projects</option>
+                            <option value="Image Processing Projects">Image Processing Projects</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="text" name="guideName" placeholder="GUIDE NAME">
+                        </div>
+                    <div class="form-group" >
+                        <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                    </div>
+                </form>
+                <button class="btn btn-default btn-large btn-block">
+                        <a href="/domains">Learn More about Project Domains</a>
+                </button>
+            </div>
+            
+    </div>
+</div>
+        
+<%include partials/footer%>

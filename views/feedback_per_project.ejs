@@ -1,0 +1,19 @@
+<%include partials/header_2%>
+
+
+<div class="container">
+    <div style="width:70%; margin:20px auto; color:aliceblue;">
+        <% ProjectGroup.forEach(function(group) {%>
+            <div class = "form-group" style="color: aliceblue;" >
+                    <button class="btn btn-lg btn-primary btn-block">Feedback</button>
+                </div>
+            <p><%=group.feedback%></p>
+            <div class = "form-group">
+                <button class="btn btn-lg btn-primary btn-block">
+                    <a href="/student/<%=group.studentName%>" style="color: aliceblue;">Go Back</a>
+                </button>
+            </div>
+        <% })%>
+
+
+<%include partials/footer%>
